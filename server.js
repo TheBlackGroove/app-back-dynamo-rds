@@ -5,6 +5,8 @@ const async = require('async');
 
 const { v4 } = require('uuid');
 
+var cors = require('cors')
+
 var mysql = require('mysql');
 
 const mysql_connection = mysql.createConnection({
@@ -18,6 +20,8 @@ const mysql_connection = mysql.createConnection({
 dynamo.AWS.config.update({
   accessKeyId: 'AKIA3XK6SHOAB3JB5YOK',
   secretAccessKey: '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',
+  // accessKeyId: 'AKIA3XK6SHOAFYYHXE7U',
+  // secretAccessKey: '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',
   region: "us-east-2"
 });
 
@@ -30,6 +34,8 @@ var auditorias_libros = dynamo.define('auditorias_libro', {
 })
 
 const app = express();
+
+app.use(cors())
 
 app.post('/registro', (req, res) => {
 
