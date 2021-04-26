@@ -16,8 +16,8 @@ const mysql_connection = mysql.createConnection({
 })
 
 dynamo.AWS.config.update({
-  accessKeyId: 'AKIA3XK6SHOADT3WB6WS',
-  secretAccessKey: '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',
+  accessKeyId: 'AKIA3XK6SHOAB3JB5YOK',
+  secretAccessKey: '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',
   region: "us-east-2"
 });
 
